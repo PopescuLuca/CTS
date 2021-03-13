@@ -1,5 +1,7 @@
 package cts.ase.ro.Clase;
 
+import java.util.Arrays;
+
 public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
@@ -7,8 +9,7 @@ public abstract class Aplicant{
 	protected int punctaj;
 	protected int nr_proiecte;
 	protected String[] denumireProiect;
-	
-	
+
 	public String getNume() {
 		return nume;
 	}
@@ -39,13 +40,20 @@ public abstract class Aplicant{
 	public void setPunctaj(int punctaj) {
 		this.punctaj = punctaj;
 	}
-	
-	
+	public int getNr_proiecte() {
+		return nr_proiecte;
+	}
+	public String[] getDenumireProiect() {
+		return denumireProiect;
+	}
 
-	
+	public void setDenumireProiect(String[] denumireProiect,int nr_proiecte) {
+		this.denumireProiect = denumireProiect;
+		this.nr_proiecte = nr_proiecte;
+	}
+
 	public Aplicant() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect) {
 		super();
@@ -56,11 +64,18 @@ public abstract class Aplicant{
 		this.nr_proiecte = nr_proiecte;
 		this.denumireProiect = denumireProiect;
 	}
-	public int getNr_proiecte() {
-		return nr_proiecte;
-	}
-	public void setNr_proiecte(int nr_proiecte) {
-		this.nr_proiecte = nr_proiecte;
-	}
 
+
+	@Override
+	public String toString() {
+		final StringBuilder sb = new StringBuilder("Aplicant{");
+		sb.append("nume='").append(nume).append('\'');
+		sb.append(", prenume='").append(prenume).append('\'');
+		sb.append(", varsta=").append(varsta);
+		sb.append(", punctaj=").append(punctaj);
+		sb.append(", nr_proiecte=").append(nr_proiecte);
+		sb.append(", denumireProiect=").append(Arrays.toString(denumireProiect));
+		sb.append('}');
+		return sb.toString();
+	}
 }

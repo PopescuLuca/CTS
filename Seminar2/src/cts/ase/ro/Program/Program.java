@@ -3,7 +3,9 @@ package cts.ase.ro.Program;
 import cts.ase.ro.Clase.Angajat;
 import cts.ase.ro.Clase.Aplicant;
 import cts.ase.ro.Clase.Utils;
+import cts.ase.ro.Reader.ReaderAngajat;
 import cts.ase.ro.Reader.ReaderAplicant;
+import cts.ase.ro.Reader.ReaderElev;
 import cts.ase.ro.Reader.ReaderStudent;
 
 import java.io.FileNotFoundException;
@@ -26,5 +28,4 @@ public class Program {
 			e.printStackTrace();
 		}
 	}
-
 }
