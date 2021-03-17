@@ -25,7 +25,7 @@ public class Angajat extends Aplicant{
 	}
 	public Angajat() {
 		super();
-		
+		setSumaFinantare(10);
 	}
 
 	@Override
@@ -35,11 +35,5 @@ public class Angajat extends Aplicant{
 		stringBuilder.append(", ocupatie= ").append(ocupatie);
 		stringBuilder.append(", salariu= ").append(salariu);
 		return stringBuilder.toString();
-	}
-
-	public int finantare() {
-		int s=10;
-		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
 	}
 }

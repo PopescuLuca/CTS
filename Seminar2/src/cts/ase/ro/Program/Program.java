@@ -2,7 +2,8 @@ package cts.ase.ro.Program;
 
 import cts.ase.ro.Clase.Angajat;
 import cts.ase.ro.Clase.Aplicant;
-import cts.ase.ro.Clase.Utils;
+import cts.ase.ro.Clase.Elev;
+import cts.ase.ro.Clase.Student;
 import cts.ase.ro.Reader.ReaderAngajat;
 import cts.ase.ro.Reader.ReaderAplicant;
 import cts.ase.ro.Reader.ReaderElev;
@@ -27,5 +28,6 @@ public class Program {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Aplicant.finantare();
 	}
 }

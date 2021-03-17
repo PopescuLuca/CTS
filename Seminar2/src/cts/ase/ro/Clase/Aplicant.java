@@ -9,6 +9,7 @@ public abstract class Aplicant{
 	protected int punctaj;
 	protected int nr_proiecte;
 	protected String[] denumireProiect;
+	protected static int sumaFinantare;
 
 	public String getNume() {
 		return nume;
@@ -28,7 +29,7 @@ public abstract class Aplicant{
 	public void setVarsta(int varsta) {
 		this.varsta = varsta;
 	}
-	public void statut(){
+	public void stareAplicant(){
 		if(punctaj>80)
 			System.out.println("Aplicantul "+nume+" "+prenume+" a fost acceptat.");
 		else
@@ -50,6 +51,14 @@ public abstract class Aplicant{
 	public void setDenumireProiect(String[] denumireProiect,int nr_proiecte) {
 		this.denumireProiect = denumireProiect;
 		this.nr_proiecte = nr_proiecte;
+	}
+
+	public static int getSumaFinantare() {
+		return sumaFinantare;
+	}
+
+	public static void setSumaFinantare(int sumaFinantare) {
+		Aplicant.sumaFinantare = sumaFinantare;
 	}
 
 	public Aplicant() {
@@ -77,5 +86,9 @@ public abstract class Aplicant{
 		sb.append(", denumireProiect=").append(Arrays.toString(denumireProiect));
 		sb.append('}');
 		return sb.toString();
+	}
+	public static int finantare(){
+		System.out.println("Aici "+ sumaFinantare);
+		return sumaFinantare;
 	}
 }

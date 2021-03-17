@@ -9,8 +9,8 @@ public class Elev extends Aplicant{
 	public int getClasa() {
 		return clasa;
 	}
-	public void setClasa(int i) {
-		this.clasa = i;
+	public void setClasa(int clasaPrimita) {
+		this.clasa = clasaPrimita;
 	}
 	public String getTutore() {
 		return tutore;
@@ -31,6 +31,7 @@ public class Elev extends Aplicant{
 	
 	public Elev() {
 		super();
+		setSumaFinantare(30);
 	}
 	
 	public Elev(String nume, String prenume, int varsta, int punctaj,
@@ -39,11 +40,5 @@ public class Elev extends Aplicant{
 		this.clasa = clasa;
 		this.tutore = tutore;
 	}
-	
-	public int finantare() {
-		int s=30;
-		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
-	}
-	
+
 }

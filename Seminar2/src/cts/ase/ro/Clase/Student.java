@@ -22,6 +22,7 @@ public class Student extends Aplicant {
 
 	public Student() {
 		super();
+		setSumaFinantare(20);
 	}
 	
 	public Student(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect, String facultate, int an_studii) {
@@ -37,12 +38,5 @@ public class Student extends Aplicant {
 		stringBuilder.append(", an_studii= ").append(an_studii);
 		return stringBuilder.toString();
 	}
-	
-	
-	public int finantare() {
-		int s=20;
-		System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
-		return s;
-	}
-	
+
 }
