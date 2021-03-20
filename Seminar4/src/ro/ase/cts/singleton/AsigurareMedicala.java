@@ -1,11 +1,11 @@
-package ro.ase.cts.singletoneLazy;
+package ro.ase.cts.singleton;
 
 public class AsigurareMedicala {
     private int id;
     private String numeAsigurat;
     private float contributie;
 
-    private static AsigurareMedicala asigurareMedicala = null;
+    private static AsigurareMedicala asigurareMedicala=new AsigurareMedicala(1,"Anonim",200.4f);
 
     private AsigurareMedicala(int id, String numeAsigurat, float contributie) {
         this.id = id;
@@ -13,10 +13,7 @@ public class AsigurareMedicala {
         this.contributie = contributie;
     }
 
-    public static synchronized AsigurareMedicala getInstance(int id, String numeAsigurat, float contributie) {
-        if (asigurareMedicala == null) {
-            asigurareMedicala = new AsigurareMedicala(id, numeAsigurat, contributie);
-        }
+    public static AsigurareMedicala getInstance(){
         return asigurareMedicala;
     }
 
