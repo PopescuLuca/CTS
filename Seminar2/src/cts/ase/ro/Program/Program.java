@@ -21,7 +21,7 @@ public class Program {
 	public static void main(String[] args) {
 		List<Aplicant> listaAplicanti;
 		try {
-			listaAplicanti = citireAplicanti(new ReaderStudent("studenti.txt"));
+			listaAplicanti = citireAplicanti(new ReaderAngajat("angajati.txt"));
 			for(Aplicant aplicant:listaAplicanti)
 				System.out.println(aplicant.toString());
 		} catch (FileNotFoundException e) {
@@ -29,6 +29,6 @@ public class Program {
 			e.printStackTrace();
 		}
 		Aplicant.finantare();
-		//
+
 	}
 }
