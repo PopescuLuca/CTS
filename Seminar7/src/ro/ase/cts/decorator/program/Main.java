@@ -18,8 +18,5 @@ public class Main {
         decoratorAbstract1.platesteContactless();
         decoratorAbstract1.platestePOS();
         decoratorAbstract1.platesteOnline();
-
-        DecoratorAbstract decoratorAbstract2=new DecoratorContactless(decoratorAbstract1);
-        decoratorAbstract2.platesteContactless();
     }
 }
