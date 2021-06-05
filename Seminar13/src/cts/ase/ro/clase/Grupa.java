@@ -58,7 +58,7 @@ public class Grupa {
                 nrRestantieri++;
             }
         }
-        return studenti.size() / nrRestantieri;
+        return (float)(studenti.size()-nrRestantieri)/studenti.size();
     }
 
 
