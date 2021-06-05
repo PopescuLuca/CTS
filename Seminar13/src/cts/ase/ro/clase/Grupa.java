@@ -60,6 +60,4 @@ public class Grupa {
         }
         return (float)(studenti.size()-nrRestantieri)/studenti.size();
     }
-
-
 }
